@@ -40,3 +40,13 @@ document.getElementById("formContacto").addEventListener("submit", (e) => {
     document.getElementById("mensaje").textContent = "Contacto agregado correctamente.";
     e.target.reset();
 });
+function actualizarContador() {
+    const total = document.querySelectorAll(".tarjeta-contacto").length;
+    let contador = document.getElementById("contador");
+    if (!contador) {
+        contador = document.createElement("p");
+        contador.id = "contador";
+        document.body.appendChild(contador);
+    }
+    contador.textContent = `Total de contactos: ${total}`;
+}
