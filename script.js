@@ -1,3 +1,8 @@
+const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!patronCorreo.test(correo)) {
+    document.getElementById("mensaje").textContent = "Correo con formato inválido.";
+    return;
+}
 function agregarContacto(nombre, telefono, correo) {
     const div = document.createElement("div");
     div.className = "tarjeta-contacto";
