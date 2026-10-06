@@ -16,9 +16,11 @@ function agregarContacto(nombre, telefono, correo) {
     `;
 
     div.querySelector(".btn-eliminar").addEventListener("click", () => {
+    if (confirm(`¿Eliminar a ${nombre}?`)) {
         div.remove();
+    }
     });
-
+    
     document.getElementById("listaContactos").appendChild(div);
 }
 
